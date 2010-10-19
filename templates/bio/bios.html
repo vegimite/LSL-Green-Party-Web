@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ bio.name }}{% endblock %}
+{% block menu-bios %}class="current"{% endblock %}
+{% block navpage %}bios/bio={{ bio.id }}{% endblock %}
+
+{% block pagetitle %}{{ bio.name }}{% endblock %}
+
+{% block col2 %}
+    <ul>
+        {% for b in bios %}
+            <li><a href="/{{ language }}/bios/bio={{ b.id }}"><h4>{{ b.name }}</h4></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+{% block col1 %}
+    <h2>{{ bio.getTitle }}</h2>
+
+    <img style="float:right;" src="/site_media/images/{{ bio.image }}">
+    {{ bio.getBio|linebreaks }}
+{% endblock %}

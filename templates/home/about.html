@@ -1,0 +1,77 @@
+﻿{% extends "base.html" %}
+
+{% block title %}{% ifequal language "en" %}About Us{% endifequal %}{% ifequal language "fr" %}À Notre Sujet{% endifequal %}{% endblock %}
+{% block menu-about %}class="current"{% endblock %}
+{% block navpage %}about{% endblock %}
+
+{% block col1 %}
+    <h3>{% ifequal language "en" %}Purpose{% endifequal %}{% ifequal language "fr" %}Buts{% endifequal %}</h3>
+    <p>
+        {% ifequal language "en" %}Our function is to act as the offcial Green Party of Canada, Lac-Saint-Louis (LSL) organizing body{% endifequal %}
+        {% ifequal language "fr" %}Notre fonction est d'agire comme l'association officiel du Parti Vert du Canada pour le comté électoral de Lac-Saint-Louis (LSL){% endifequal %}
+    </p>
+    <p>
+        {% ifequal language "en" %}Our commitment to you is to be a point of contact, provide information and support regarding our electoral region's work on promoting, growing interest in and action in support of{% endifequal %}
+        {% ifequal language "fr" %}Notre engagement envers vous, est d'être un point de contact, de vous fournir des informations et du support à l'égard des efforts de notre région électorale sur la promotion, d'encouragement sur l'intérêt dans et nos actions de support envers:{% endifequal %}
+    </p>
+    <ul class="list">
+        {% ifequal language "en" %}
+            <li>Getting our candidate elected</li>
+            <li>Communcating, educating and supporting the values of the Green Pary of Canada</li>
+            <li>Listening to your questiong and needs, paying particular attention to the issues affecting our electoral district</li>
+            <li>Having fun while working to ensure a more prosperous and sustainable future for all citizens</li>
+        {% endifequal %}
+        {% ifequal language "fr" %}
+            <li>l'élection de notre candidat</li>
+            <li>la communication, l'éducation et le soutient des valeurs da la Parti Vert du Canada</li>
+            <li>l'écoute de vos questions et besions, en apportant de l'attention particulière sur les problèmes de notre comté electoral</li>
+            <li>Having fun while working to ensure a more prosperous and sustainable future for all citizens</li>
+        {% endifequal %}
+    </ul>
+    <h3>{% ifequal language "en" %}Donate{% endifequal %}{% ifequal language "fr" %}Donnez{% endifequal %}</h3>
+    <p>
+        {% ifequal language "en" %}Your tax deductable donation is one way to express your voice.<br>Please help support the activities of the Lac-Saint-Louis EDA.{% endifequal %}
+        {% ifequal language "fr" %}Votre don éligible à une réduction d'impôt est une manière de vous exprimer. S'il vous plait, aidez-nous a supporter les activités de l'Association du Parti Vert du Canada pour le comté électoral de Lac-Saint-Louis.{% endifequal %}
+    </p>
+    <a href="https://www.greenparty.ca/{{ language }}/civicrm/contribute/transact?reset=1&id=6&source=FSA-24027">{% ifequal language "en" %}Donate by credit card{% endifequal %}{% ifequal language "fr" %}Faites un don par carte de crédit{% endifequal %}</a>
+    <br><br>
+    <p>{% ifequal language "en" %}By check, make payable to{% endifequal %}{% ifequal language "fr" %}Par cheque payable à{% endifequal %}<br><br>
+    THE GREEN PARTY OF CANADA<br><br>
+    {% ifequal language "en" %}and mail to:{% endifequal %}{% ifequal language "fr" %}envoyé par la poste à{% endifequal %}<br><br>
+    George Diekmeyer<br>
+    Financial Officer<br>
+    160 Michael Cres., suite 106<br>
+    Beconsfield, Que.<br>
+    H9W 6G1
+    </p>
+    <p>{% ifequal language "en" %}For more information please call Mr G. Diekmeyer at{% endifequal %}{% ifequal language "fr" %}Pour des informations suplémentaires appelez M. G. Diekmeyer à{% endifequal %}:<br>514-697-2924</p>
+    <h3>{% ifequal language "en" %}Contact Us{% endifequal %}{% ifequal language "fr" %}Contactez Nous{% endifequal %}</h3>
+    {% for c in contacts %}
+         {{c.name}} : <a href="mailto:{{ c.email }}">{{ c.email }}</a><br>
+    {% endfor %}
+{% endblock %}
+{% block col3 %}
+    <table>
+        {% ifequal language "en" %}
+            <div align="center"><em>Your tax credit for political donations means your contribution costs less!</em></div>
+            <th>Your<br>Donation</th><th>Your<br>Tax Credit</th><th>Your cost<br>after tax credit</th>
+        {% endifequal %}
+        {% ifequal language "fr" %}
+            <div align="center"><em>Votre crédit d'impôt pour les contributions aux partis politiques signifie que votre don coûte moins cher!</em></div>
+            <th>Votre<br>Don</th><th>Votre<br>Crédit</th><th>Coût après<br>le crédit</th>
+        {% endifequal %}
+        <tr><td>$50.00</td><td>$37.50</td><td>$12.50</td></tr>
+        <tr><td>$100.00</td><td>$75.00</td><td>$25.00</td></tr>
+        <tr><td>$150.00</td><td>$112.50</td><td>$37.50</td></tr>
+        <tr><td>$200.00</td><td>$150.00</td><td>$50.00</td></tr>
+        <tr><td>$300.00</td><td>$225.00</td><td>$75.00</td></tr>
+        <tr><td>$400.00</td><td>$300.00</td><td>$100.00</td></tr>
+        <tr><td>$500.00</td><td>$350.00</td><td>$150.00</td></tr>
+        <tr><td>$750.00</td><td>$475.00</td><td>$275.00</td></tr>
+        <tr><td>$1,000.00</td><td>$558.00</td><td>$442.00</td></tr>
+        <tr><td>$1,100.00</td><td>$591.67</td><td>$508.33</td></tr>
+    </table><br>
+    <p style="font-size:smaller;">Donors who do not pay income tax are unable to benefit from these credits. We appreciate all donations.</p>
+    <p style="font-size:smaller;">Donate today by completing the online donation form, by mailing in the <a href="/files/gpcdonation.pdf" style="text-decoration: underline;">printable donation form</a> or by calling 1-866-868-3447.</p>
+
+{% endblock %}

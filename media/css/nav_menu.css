@@ -1,0 +1,66 @@
+#navigation
+{
+    width: 100%;
+    background: #eee;
+    float: left;
+}
+
+#navigation ul /* remove bullets and list indents */
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 14%;
+    float: left;
+}
+
+#navigation a, #navigation h3
+{
+    font: bold 11px/16px arial, helvetica, sans-serif;
+    display: block;
+    margin: 0;
+    padding: 2px 3px;
+}
+
+#navigation a
+{
+    color: #000;
+    background: #efefef;
+    text-decoration: none;
+}
+
+#navigation a:hover
+{
+    color: #a00;
+    background: #fff;
+}
+
+
+#navigation li
+{
+    /* make the list elements a containing block for the nested lists */
+    position: relative;
+}
+
+#navigation ul ul
+{
+    position: absolute;
+    z-index: 500;
+    width: 100%;
+}
+
+#navigation ul ul ul {
+position: absolute;
+top: 0;
+left: 100%;
+}
+
+div#navigation ul ul,
+div#navigation ul li:hover ul ul,
+div#navigation ul ul li:hover ul ul
+{display: none;}
+
+div#navigation ul li:hover ul,
+div#navigation ul ul li:hover ul,
+div#navigation ul ul ul li:hover ul
+{display: block;}

@@ -1,0 +1,6 @@
+<ul>
+    <li><a href="/{{ language }}/events/" {% block menu-events %}{% endblock %}><span>{% ifequal language "en" %}EVENTS{% endifequal %}{% ifequal language "fr" %}EVENMENTS{% endifequal %}</span></a></li>
+    <li><a href="/{{ language }}/issues/" {% block menu-issues %}{% endblock %}><span>{% ifequal language "en" %}ISSUES{% endifequal %}{% ifequal language "fr" %}ENJEUX{% endifequal %}</span></a></li>
+    <li><a href="/{{ language }}/bios/" {% block menu-bios %}{% endblock %}><span>BIOS</span></a></li>
+    <li><a href="/{{ language }}/" {% block menu-home %}{% endblock %}><span>{% ifequal language "en" %}HOME{% endifequal %}{% ifequal language "fr" %}ACCEUIL{% endifequal %}</span></a></li>
+</ul>

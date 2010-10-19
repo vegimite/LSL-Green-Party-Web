@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>{% ifequal language "en" %}LSL Green Party{% endifequal %}{% ifequal language "fr" %}LSL Parti Vert{% endifequal %} - {% block title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="/site_media/images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="/site_media/css/base.css" />
+        <link rel="stylesheet" type="text/css" href="/site_media/css/nav_menu.css" />
+        <!--[if lte IE 6]>
+          <style type="text/css" media="screen, projection, print">@import url("http://static.lost-theories.com/css/ie.css");</style>
+        <![endif]-->
+        <!--[if IE]>
+            <style type="text/css" media="screen">
+                #navigation ul li {float: left; width: 100%;}
+            </style>
+        <![endif]-->
+        <!--[if lt IE 7]>
+            <style type="text/css" media="screen">
+                body
+                {
+                    behavior: url(/site_media/css/csshover.htc);
+                    font-size: 100%;
+                }
+
+                #navigation ul li a {height: 1%;}
+
+                #navigation a, #navigation h2
+                {
+                    font: bold 0.7em/1.4em arial, helvetica, sans-serif;
+                }
+            </style>
+        <![endif]-->
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+        <div id="super-container">
+            <div id="main-container">
+                <div id="header-container">
+                        <div id=banner>
+                            <img border="0" alt="parti vert - green party" src="/site_media/images/gpc-pvc-2.gif">
+                        </div>
+                    <div id="header">
+                        <h1>Lac-Saint-Louis</h1>
+                        <h4>Pointe-Claire - Beaconsfield - Baie D’Urfé - Sainte-Anne-de-Bellevue - Senneville - Kirkland - Sainte-Geneviève - Pierrefonds</h3>
+                    </div>
+                </div>
+                <div id="navigation-container">
+                	<div id="navigation" class="jquerycssmenu">
+                		<ul>
+                			<li><a href="#"><h3>Home</h3></a></li>
+                		</ul>
+                		<ul>
+                			<li><a href="#"><h3>Act Today</h3></a>
+                                <ul>
+                                    <li><a href="#">Volunteer</a></li>
+                                    <li><a href="#">Donate</a></li>
+                                    <li><a href="#">Join</a></li>
+                                </ul>
+                            </li>
+                		</ul>
+                		<ul>
+                			<li><a href="#"><h3>News &amp; Events</h3></a>
+                                <ul>
+                                    <li><a href="#">Media Releases</a></li>
+                                    <li><a href="#">Calendar</a></li>
+                                </ul>
+                            </li>
+                		</ul>
+                		<ul>
+                			<li><a href="#"><h3>Party</h3></a>
+                               <ul>
+                                    <li><a href="#">Green Party of Canada</a></li>
+                                    <li><a href="#">Vision Green</a></li>
+                                </ul>
+                             </li>
+                		</ul>
+                		<ul>
+                			<li><a href="#"><h3>Contact us</h3></a></li>
+                		</ul>
+                		<ul>
+                			<li><a href="#"><h3>Français</h3></a></li>
+                		</ul>
+                	</div>
+                </div>
+                <div id="content-container">
+                    <div id="content-container2">
+                        <div id="content">
+                            {% block content %}{% endblock %}
+
+            			</div>
+            			<div id="aside">
+                            {% block aside %}{% endblock %}
+            			</div>
+         			</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
