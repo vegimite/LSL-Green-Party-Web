@@ -1,5 +1,4 @@
 from django.db import models
-from greenparty.home.models import Link
 
 # Create your models here.
 

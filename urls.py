@@ -27,5 +27,5 @@ urlpatterns = patterns('',
 
     #media path
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': 'C:\Documents and Settings\Christopher.CHRIS\My Documents\BitNami DjangoStack projects\greenparty/media/'}),
+        {'document_root': './media/'}),
 )
