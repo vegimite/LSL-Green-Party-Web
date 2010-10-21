@@ -47,27 +47,27 @@
                 <div id="navigation-container">
                 	<div id="navigation" class="jquerycssmenu">
                 		<ul>
-                			<li><a href="#"><h3>Home</h3></a></li>
+                			<li><a href="/{{ language }}/"><h3>Home</h3></a></li>
                 		</ul>
                 		<ul>
-                			<li><a href="#"><h3>Act Today</h3></a>
+                			<li><h3>Act Today</h3>
                                 <ul>
-                                    <li><a href="volunteer">Volunteer</a></li>
-                                    <li><a href="donate">Donate</a></li>
-                                    <li><a href="#">Join</a></li>
+                                    <li><a href="/{{ language }}/volunteer">Volunteer</a></li>
+                                    <li><a href="/{{ language }}/donate">Donate</a></li>
+                                    <li><a href="/{{ language }}/join">Join</a></li>
                                 </ul>
                             </li>
                 		</ul>
                 		<ul>
-                			<li><a href="#"><h3>News &amp; Events</h3></a>
+                			<li><h3>News &amp; Events</h3>
                                 <ul>
-                                    <li><a href="#">Media Releases</a></li>
-                                    <li><a href="#">Calendar</a></li>
+                                    <li><a href="/{{ language }}/media">Media Releases</a></li>
+                                    <li><a href="/{{ language }}/calendar">Calendar</a></li>
                                 </ul>
                             </li>
                 		</ul>
                 		<ul>
-                			<li><a href="#"><h3>Party</h3></a>
+                			<li><h3>Party</h3>
                                <ul>
                                     <li><a href="#">Green Party of Canada</a></li>
                                     <li><a href="#">Vision Green</a></li>
@@ -75,10 +75,10 @@
                              </li>
                 		</ul>
                 		<ul>
-                			<li><a href="#"><h3>Contact us</h3></a></li>
+                			<li><a href="/{{ language }}/contact"><h3>Contact us</h3></a></li>
                 		</ul>
                 		<ul>
-                			<li><a href="#"><h3>Français</h3></a></li>
+                			<li><a href="/{% ifequal language "en" %}fr{% endifequal %}{% ifequal language "fr" %}en{% endifequal %}/{% block navpage %}{% endblock %}"><h3>{% ifequal language "en" %}Français{% endifequal %}{% ifequal language "fr" %}English{% endifequal %}</h3></a></li>
                 		</ul>
                 	</div>
                 </div>
