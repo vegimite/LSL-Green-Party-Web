@@ -83,5 +83,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'greenparty.home',
-    'greenparty.news'
+    'greenparty.polls',
+    'greenparty.volunteer',
 )

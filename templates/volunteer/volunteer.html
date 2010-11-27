@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}{% ifequal language "en" %}Donate{% endifequal %}{% ifequal language "fr" %}Dons{% endifequal %}{% endblock %}
+{% block navpage %}donate{% endblock %}
+
+
+{% block content %}
+    <h1>Volunteer!</h1>
+    <h3>{{ introtext.getText }}</h3>
+{% endblock %}
