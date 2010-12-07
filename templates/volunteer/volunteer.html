@@ -6,5 +6,9 @@
 
 {% block content %}
     <h1>Volunteer!</h1>
-    <h3>{{ introtext.getText }}</h3>
+    <p>{{ introtext.getText }}</p>
+    <form method="post" action="">
+        {{ form }}
+        <input type="submit" value="Submit" />
+    </form>
 {% endblock %}

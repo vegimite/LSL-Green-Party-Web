@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 class Volunteer(models.Model):
@@ -23,3 +24,7 @@ class VolunteerBlurb(models.Model):
             return self.text_english
         if self.lang == "fr":
             return self.text_french
+
+class VolunteerForm(ModelForm):
+    class Meta:
+        model = Volunteer
