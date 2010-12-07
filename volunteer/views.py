@@ -1,5 +1,6 @@
 # Create your views here.
 from django.shortcuts import render_to_response
+from django.utils import translation
 from greenparty.volunteer.models import Volunteer, VolunteerBlurb, VolunteerForm
 
 def volunteer(request, language):
@@ -18,4 +19,5 @@ def volunteer(request, language):
     introtext = VolunteerBlurb.objects.all()[0]
     introtext.lang = language
 
+    translation.activate(language)
     return render_to_response('volunteer/volunteer.html', ({'language' : language, 'introtext' : introtext, 'form': form, }))

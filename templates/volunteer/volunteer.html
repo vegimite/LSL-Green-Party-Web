@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}{% ifequal language "en" %}Donate{% endifequal %}{% ifequal language "fr" %}Dons{% endifequal %}{% endblock %}
-{% block navpage %}donate{% endblock %}
+{% block title %}{% trans "Volunteer" %}{% endblock %}
+{% block navpage %}volunteer{% endblock %}
 
 
 {% block content %}
-    <h1>Volunteer!</h1>
+    <h1>{% trans "Volunteer!" %}</h1>
     <p>{{ introtext.getText }}</p>
     <form method="post" action="">
         {{ form }}

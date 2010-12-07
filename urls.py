@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     (r'^(?P<language>(en|fr))/donate/$',                    'greenparty.home.views.donate'),
 
     (r'^(?P<language>(en|fr))/volunteer/$',                 'greenparty.volunteer.views.volunteer'),
+
+    (r'^(?P<language>(en|fr))/media/$',                     'greenparty.news.views.events'),
 ##    (r'^(?P<language>(en|fr))/bios/bio=(?P<bio_id>[\d]+)$', 'greenparty.news.views.bios'),
 ##
 ##    (r'^(?P<language>(en|fr))/about/$',                     'greenparty.home.views.about'),

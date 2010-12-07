@@ -1,17 +1,14 @@
 ﻿{% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}{% ifequal language "en" %}Events{% endifequal %}{% ifequal language "fr" %}Événements{% endifequal %}{% endblock %}
-{% block menu-events %}class="current"{% endblock %}
-{% block navpage %}events{% endblock %}
+{% block title %}{% trans "Events" %}{% endblock %}
+{% block navpage %}media{% endblock %}
 
-{% block pagetitle %}{% ifequal language "en" %}Events{% endifequal %}{% ifequal language "fr" %}Événements{% endifequal %}{% endblock %}
-
-{% block col1 %}
+{% block content %}
     {% for event in events %}
         <h3>{{ event.getTitle }}</h3><br>
-        {{ event.date|date:"d-m-Y" }}<br>
+        {{ event.date|date:"l, d F Y H:i" }}<br>
         <p>{{ event.getText|linebreaks }}</p>
     {% endfor %}
-{% endblock %}
 
-<p>This is some new text</p>
+{% endblock %}

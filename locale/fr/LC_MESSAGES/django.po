@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-07 13:06-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#: .\templates\base.html.py:5
+msgid "LSL Green Party"
+msgstr "Parti Vert LSL"
+
+#: .\templates\base.html.py:50
+msgid "Home"
+msgstr ""
+
+#: .\templates\base.html.py:53
+msgid "Act Today"
+msgstr "Agissez Aujourd'hui"
+
+#: .\templates\base.html.py:55 .\templates\volunteer\volunteer.html.py:4
+msgid "Volunteer"
+msgstr "Volontaire"
+
+#: .\templates\base.html.py:56 .\templates\home\donate.html.py:4
+msgid "Donate"
+msgstr "Donnez"
+
+#: .\templates\base.html.py:57
+msgid "Join"
+msgstr ""
+
+#: .\templates\base.html.py:62
+msgid "News &amp; Events"
+msgstr "Nouvelles &amp; Evénements"
+
+#: .\templates\base.html.py:64
+msgid "Media Releases"
+msgstr ""
+
+#: .\templates\base.html.py:65
+msgid "Calendar"
+msgstr ""
+
+#: .\templates\base.html.py:70
+msgid "Party"
+msgstr ""
+
+#: .\templates\base.html.py:72
+msgid "Green Party of Canada"
+msgstr ""
+
+#: .\templates\base.html.py:73
+msgid "Vision Green"
+msgstr ""
+
+#: .\templates\base.html.py:78
+msgid "Contact us"
+msgstr ""
+
+#: .\templates\events\events.html.py:4
+msgid "Events"
+msgstr ""
+
+#: .\templates\home\donate.html.py:9
+msgid "Get your money back at tax time"
+msgstr ""
+
+#: .\templates\home\donate.html.py:10
+msgid "If you pay taxes, you'll get money back when you donate."
+msgstr ""
+
+#: .\templates\home\donate.html.py:11
+msgid ""
+"For the first $400 you donate in any year, you'll get three quarters of it "
+"back at tax time. So that means you can give $400 now and use the tax "
+"receipt we provide to get $300 back. That means it only costs $100 to give "
+"the Green Party a $400 push."
+msgstr ""
+
+#: .\templates\home\donate.html.py:12
+msgid ""
+"It's easy to spend $25 at restaurant or at the movies. A $100 donation now "
+"will only cost $25 once you get $75 back on your taxes."
+msgstr ""
+
+#: .\templates\home\donate.html.py:15
+msgid "Donation"
+msgstr ""
+
+#: .\templates\home\donate.html.py:15
+msgid "Tax Credit"
+msgstr ""
+
+#: .\templates\home\donate.html.py:15
+msgid "Your Cost"
+msgstr ""
+
+#: .\templates\home\donate.html.py:30
+msgid ""
+"This table applies per person per year. So your partner can make a matching "
+"$400 donation to receive a matching $300 credit, and you both can donate "
+"again in the new year."
+msgstr ""
+
+#: .\templates\home\donate.html.py:31
+msgid ""
+"(Note that after the first $400, the additional tax credit on the next $350 "
+"is one half. After the first $750, the additional tax credit is one third up "
+"to a yearly maximum tax credit of $650. You must be a permanent resident of "
+"Canada to donate.)"
+msgstr ""
+
+#: .\templates\home\home.html.py:11
+msgid "Welcome"
+msgstr ""
+
+#: .\templates\home\home.html.py:16
+msgid "Our Candidate"
+msgstr ""
+
+#: .\templates\home\home.html.py:22
+msgid "Aside heading"
+msgstr ""
+
+#: .\templates\volunteer\volunteer.html.py:9
+msgid "Volunteer!"
+msgstr ""

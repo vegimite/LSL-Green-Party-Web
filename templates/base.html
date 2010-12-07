@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>{% ifequal language "en" %}LSL Green Party{% endifequal %}{% ifequal language "fr" %}LSL Parti Vert{% endifequal %} - {% block title %}{% endblock %}</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% trans "LSL Green Party" %} - {% block title %}{% endblock %}</title>
         <link rel="shortcut icon" href="/site_media/images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="/site_media/css/base.css" />
         <link rel="stylesheet" type="text/css" href="/site_media/css/nav_menu.css" />
@@ -47,35 +47,35 @@
                 <div id="navigation-container">
                 	<div id="navigation" class="jquerycssmenu">
                 		<ul>
-                			<li><a href="/{{ language }}/"><h3>Home</h3></a></li>
+                			<li><a href="/{{ language }}/"><h3>{% trans "Home" %}</h3></a></li>
                 		</ul>
                 		<ul>
-                			<li><h3>Act Today</h3>
+                			<li><h3>{% trans "Act Today" %}</h3>
                                 <ul>
-                                    <li><a href="/{{ language }}/volunteer">Volunteer</a></li>
-                                    <li><a href="/{{ language }}/donate">Donate</a></li>
-                                    <li><a href="/{{ language }}/join">Join</a></li>
+                                    <li><a href="/{{ language }}/volunteer">{% trans "Volunteer" %}</a></li>
+                                    <li><a href="/{{ language }}/donate">{% trans "Donate" %}</a></li>
+                                    <li><a href="/{{ language }}/join">{% trans "Join" %}</a></li>
                                 </ul>
                             </li>
                 		</ul>
                 		<ul>
-                			<li><h3>News &amp; Events</h3>
+                			<li><h3>{% trans "News &amp; Events" %}</h3>
                                 <ul>
-                                    <li><a href="/{{ language }}/media">Media Releases</a></li>
-                                    <li><a href="/{{ language }}/calendar">Calendar</a></li>
+                                    <li><a href="/{{ language }}/media">{% trans "Media Releases" %}</a></li>
+                                    <li><a href="/{{ language }}/calendar">{% trans "Calendar" %}</a></li>
                                 </ul>
                             </li>
                 		</ul>
                 		<ul>
-                			<li><h3>Party</h3>
+                			<li><h3>{% trans "Party" %}</h3>
                                <ul>
-                                    <li><a href="#">Green Party of Canada</a></li>
-                                    <li><a href="#">Vision Green</a></li>
+                                    <li><a href="#">{% trans "Green Party of Canada" %}</a></li>
+                                    <li><a href="#">{% trans "Vision Green" %}</a></li>
                                 </ul>
                              </li>
                 		</ul>
                 		<ul>
-                			<li><a href="/{{ language }}/contact"><h3>Contact us</h3></a></li>
+                			<li><a href="/{{ language }}/contact"><h3>{% trans "Contact us" %}</h3></a></li>
                 		</ul>
                 		<ul>
                 			<li><a href="/{% ifequal language "en" %}fr{% endifequal %}{% ifequal language "fr" %}en{% endifequal %}/{% block navpage %}{% endblock %}"><h3>{% ifequal language "en" %}Français{% endifequal %}{% ifequal language "fr" %}English{% endifequal %}</h3></a></li>

@@ -1,32 +1,32 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}{% ifequal language "en" %}Donate{% endifequal %}{% ifequal language "fr" %}Dons{% endifequal %}{% endblock %}
+{% block title %}{% trans "Donate" %}{% endblock %}
 {% block navpage %}donate{% endblock %}
 
 
 {% block content %}
-   <H1>Get your money back at tax time</H1>
-    <p>If you pay taxes, you'll get money back when you donate.</p>
-    <p>For the first $400 you donate in any year, you'll get three quarters of it back at tax time.
-        So that means you can give $400 now and use the tax receipt we provide to get $300 back. That means it only costs $100 to give
-        the Green Party a $400 push.</p>
-    <p>It's easy to spend $25 at restaurant or at the movies. A $100 donation now will only cost $25 once you get $75 back on your taxes.</p>
+    <H1>{% trans "Get your money back at tax time" %}</H1>
+    <p>{% trans "If you pay taxes, you'll get money back when you donate." %}</p>
+    <p>{% trans "For the first $400 you donate in any year, you'll get three quarters of it back at tax time. So that means you can give $400 now and use the tax receipt we provide to get $300 back. That means it only costs $100 to give the Green Party a $400 push." %}</p>
+    <p>{% trans "It's easy to spend $25 at restaurant or at the movies. A $100 donation now will only cost $25 once you get $75 back on your taxes." %}</p>
+
     <table>
-        <th>Donation</th><th>Tax Credit</th><th>Your Cost</th>
-        <tr><td>$40.00</td><td>$30.00</td><td>$10.00</td></tr>
-        <tr><td>$50.00</td><td>$37.50</td><td>$12.50</td></tr>
-        <tr><td>$100.00</td><td>$75.00</td><td>$25.00</td></tr>
-        <tr><td>$150.00</td><td>$112.50</td><td>$37.50</td></tr>
-        <tr><td>$200.00</td><td>$150.00</td><td>$50.00</td></tr>
-        <tr><td>$300.00</td><td>$225.00</td><td>$75.00</td></tr>
-        <tr><td>$400.00</td><td>$300.00</td><td>$100.00</td></tr>
-        <tr><td>$500.00</td><td>$350.00</td><td>$150.00</td></tr>
-        <tr><td>$750.00</td><td>$475.00</td><td>$275.00</td></tr>
-        <tr><td>$1,000.00</td><td>$558.00</td><td>$442.00</td></tr>
-        <tr><td>$1,100.00</td><td>$591.67</td><td>$508.33</td></tr>
-    </table><br>
-    <p>This table applies per person per year. So your partner can make a matching $400 donation to receive a matching $300 credit, and you both can donate again in the new year.</p>
-    <p>(Note that after the first $400, the additional tax credit on the next $350 is one half. After the first $750, the
-        additional tax credit is one third up to a yearly maximum tax credit of $650. You must be a permanent resident
-        of Canada to donate.)</p>
+        <th>{% trans "Donation" %}</th><th>{% trans "Tax Credit" %}</th><th>{% trans "Your Cost" %}</th>
+
+        <tr><td>${{ 40.00|floatformat:2 }}</td><td>${{ 30.00|floatformat:2 }}</td><td>${{ 10.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 50.00|floatformat:2 }}</td><td>${{ 37.50|floatformat:2 }}</td><td>${{ 12.50|floatformat:2 }}</td></tr>
+        <tr><td>${{ 100.00|floatformat:2 }}</td><td>${{ 75.00|floatformat:2 }}</td><td>${{ 25.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 150.00|floatformat:2 }}</td><td>${{ 112.50|floatformat:2 }}</td><td>${{ 37.50|floatformat:2 }}</td></tr>
+        <tr><td>${{ 200.00|floatformat:2 }}</td><td>${{ 150.00|floatformat:2 }}</td><td>${{ 50.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 300.00|floatformat:2 }}</td><td>${{ 225.00|floatformat:2 }}</td><td>${{ 75.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 400.00|floatformat:2 }}</td><td>${{ 300.00|floatformat:2 }}</td><td>${{ 100.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 500.00|floatformat:2 }}</td><td>${{ 350.00|floatformat:2 }}</td><td>${{ 150.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 750.00|floatformat:2 }}</td><td>${{ 475.00|floatformat:2 }}</td><td>${{ 275.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 1000.00|floatformat:2 }}</td><td>${{ 558.00|floatformat:2 }}</td><td>${{ 442.00|floatformat:2 }}</td></tr>
+        <tr><td>${{ 1100.00|floatformat:2 }}</td><td>${{ 591.67|floatformat:2 }}</td><td>${{ 508.33|floatformat:2 }}</td></tr>
+    </table>
+    <br>
+    <p>{% trans "This table applies per person per year. So your partner can make a matching $400 donation to receive a matching $300 credit, and you both can donate again in the new year." %}</p>
+    <p>{% trans "(Note that after the first $400, the additional tax credit on the next $350 is one half. After the first $750, the additional tax credit is one third up to a yearly maximum tax credit of $650. You must be a permanent resident of Canada to donate.)" %}</p>
 {% endblock %}

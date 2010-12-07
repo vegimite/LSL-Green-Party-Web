@@ -32,6 +32,8 @@ SITE_ID = 1
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
+USE_L10N = True
+USE_THOUSAND_SEPARATOR = True
 FILE_CHARSET = 'utf-8'
 DEFAULT_CHARSET = 'utf-8'
 
@@ -85,4 +87,5 @@ INSTALLED_APPS = (
     'greenparty.home',
     'greenparty.polls',
     'greenparty.volunteer',
+    'greenparty.news',
 )
