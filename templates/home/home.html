@@ -1,27 +1,27 @@
 ﻿{% extends "base.html" %}
 {% load i18n %}
+{% load bbcode %}
 
 
-{% block title %}{% ifequal language "en" %}Home{% endifequal %}{% ifequal language "fr" %}Acceuil{% endifequal %}{% endblock %}
-{% block menu-home %}class="current"{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+{% block navpage %}{% endblock %}
 
 
 {% block content %}
-    <h2>
-    	{% trans "Welcome" %}
-    </h2>
-    {{ welcome.getMainText }}
+    <h2>{% trans "Welcome" %}</h2>
+    {{ welcome.getMainText|bbcode }}
+    </br>
 
-    <h2>
-    	{% trans "Our Candidate" %}
-    </h2>
-    {{ candidate.getMainText }}
+    <h2>{% trans "Our Candidate" %}</h2>
+    {{ candidate.getMainText|bbcode }}
+    </br>
+
+    <h2>{% trans "News" %}</h2>
+    </br>
+    {% include "events\event.html" %}
+
 {% endblock %}
 {% block aside %}
-    <h2>
-        {% trans "Aside heading" %}
-    </h2>
-    <p>
-    	Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
-    </p>
+    <h2>{{ aside.getTitle }}</h2>
+    {{ aside.getMainText|bbcode }}
 {% endblock %}

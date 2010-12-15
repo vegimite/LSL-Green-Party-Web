@@ -9,8 +9,10 @@ urlpatterns = patterns('',
     # Example:
     # (r'^greenparty/', include('greenparty.foo.urls')),
     (r'^(?P<language>(en|fr))/$',                           'greenparty.home.views.home'),
-
+    (r'^(?P<language>(en|fr))/calendar/$',                  'greenparty.home.views.calendar'),
     (r'^(?P<language>(en|fr))/donate/$',                    'greenparty.home.views.donate'),
+    (r'^(?P<language>(en|fr))/join/$',                      'greenparty.home.views.join'),
+
 
     (r'^(?P<language>(en|fr))/volunteer/$',                 'greenparty.volunteer.views.volunteer'),
 

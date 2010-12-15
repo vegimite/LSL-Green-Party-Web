@@ -6,9 +6,8 @@
 
 {% block content %}
     {% for event in events %}
-        <h3>{{ event.getTitle }}</h3><br>
-        {{ event.date|date:"l, d F Y H:i" }}<br>
-        <p>{{ event.getText|linebreaks }}</p>
+      {% include "events\event.html" %}
+
     {% endfor %}
 
 {% endblock %}

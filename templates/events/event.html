@@ -1,0 +1,7 @@
+{% load i18n %}
+{% load bbcode %}
+
+<h2><a href="{{event.getSlug}}">{{ event.getTitle }}</a></h2>
+<h4>&nbsp;{{ event.date|date:"l, d F Y H:i" }}</h4>
+<br>
+<p>{{ event.getText|bbcode }}</p>

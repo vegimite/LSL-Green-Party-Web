@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}{% trans "Join" %}{% endblock %}
+{% block navpage %}join{% endblock %}
+
+
+{% block content %}
+
+    <H1>{% trans "Join" %}</H1>
+    <p>{% trans "Green ideas and green policies are taking off in Canada and around the world, becoming a member now will put you in at the ground-level of smart, sustainable change." %}</p>
+    <p>{% trans "To be eligible for a one-year membership in either party, you must make a minimum contribution of $10. Your gift will help us find talented, enthusiastic candidates, do research on green policy alternatives and run an organization that keeps us all in touch and working effectively!" %}</p>
+    <p><a href="https://greenparty.ca/{{language}}/civicrm/contribute/transact?reset=1&id=1">{% trans "Join the Green Party of Canada." %}</a></p>
+
+    </br></br>
+    <p>{% trans "Questions?" %}&nbsp;<a href="/{{ language }}/contact">Contact the Lac-Saint-Louis Greens.</a></p>
+{% endblock %}
+
