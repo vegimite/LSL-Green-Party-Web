@@ -1,5 +1,6 @@
 from django.db import models
 from django.forms import ModelForm
+from greenparty.home.models import GreenModel
 
 # Create your models here.
 class Volunteer(models.Model):
@@ -12,18 +13,8 @@ class Volunteer(models.Model):
     def __unicode__(self):
         return self.last_name + ', ' + self.first_name
 
-class VolunteerBlurb(models.Model):
-
-    text_english = models.TextField()
-    text_french = models.TextField()
-    lang = ""
-
-
-    def getText(self):
-        if self.lang == "en":
-            return self.text_english
-        if self.lang == "fr":
-            return self.text_french
+class Blurb(GreenModel):
+    blurb = ''
 
 class VolunteerForm(ModelForm):
     class Meta:

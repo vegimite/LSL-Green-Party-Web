@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load bbcode %}
+
+{% block title %}{% trans "Media Releases" %}{% endblock %}
+{% block navpage %}media{{ base_url }}/{% if language = 'fr' %}{{event.slug_english}}{% else %}{{event.slug_french}}{% endif %} {% endblock %}
+
+
+{% block content %}
+    {% include "events\event.html" %}
+{% endblock %}

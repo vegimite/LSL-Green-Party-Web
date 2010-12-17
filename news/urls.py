@@ -1,29 +1,26 @@
 from django.conf.urls.defaults import *
-from djangoblog.blog.models import Entry
-from tagging.views import tagged_object_list
+from greenparty.news.models import Event
+
 
 
 
 info_dict = {
-	'queryset': Entry.objects.filter(status=1),
-	'date_field': 'pub_date',
+	'queryset': Event.objects.filter(draft=False),
+	'date_field': 'date',
 }
 
 
+urlpatterns = patterns('greenparty.news.views',
 
-urlpatterns = patterns('django.views.generic.date_based',
+	(r'^(?P<year>\d{4})/(?P<month>[a-z]{3})/(?P<day>\d{1,2})/(?P<slug>[\w-]+)/$', 'event_detail'),
 
-	(r'(?P<year>d{4})/(?P<month>[a-z]{3})/(?P<day>w{1,2})/(?P<slug>[-w]+)/$', 'object_detail', dict(info_dict, slug_field='slug',template_name='blog/detail.html')),
+	(r'^(?P<year>\d{4})/(?P<month>[a-z]{3})/(?P<day>\d{1,2})/$','event_day',),
 
-	(r'^(?P<year>d{4})/(?P<month>[a-z]{3})/(?P<day>w{1,2})/(?P<slug>[-w]+)/$', 'object_detail', dict(info_dict, template_name='blog/list.html')),
+	(r'^(?P<year>\d{4})/(?P<month>[a-z]{3})/$', 'event_month', ),
 
-	(r'^(?P<year>d{4})/(?P<month>[a-z]{3})/(?P<day>w{1,2})/$','archive_day',dict(info_dict,template_name='blog/list.html')),
+	(r'^(?P<year>\d{4})/$', 'event_year',),
 
-	(r'^(?P<year>d{4})/(?P<month>[a-z]{3})/$','archive_month', dict(info_dict, template_name='blog/list.html')),
-
-	(r'^(?P<year>d{4})/$','archive_year', dict(info_dict, template_name='blog/list.html')),
-
-	(r'^$','archive_index', dict(info_dict, template_name='blog/list.html')),
+	(r'^$','event_index', ),
 
 )
 

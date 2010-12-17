@@ -9,11 +9,11 @@
 
 {% block content %}
     <h2>{% trans "Welcome" %}</h2>
-    {{ welcome.getMainText|bbcode }}
+    {{ welcome.getMainText|safe }}
     </br>
 
     <h2>{% trans "Our Candidate" %}</h2>
-    {{ candidate.getMainText|bbcode }}
+    {{ candidate.getMainText|safe }}
     </br>
 
     <h2>{% trans "News" %}</h2>
@@ -23,5 +23,5 @@
 {% endblock %}
 {% block aside %}
     <h2>{{ aside.getTitle }}</h2>
-    {{ aside.getMainText|bbcode }}
+    {{ aside.getMainText|safe }}
 {% endblock %}

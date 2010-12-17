@@ -8,15 +8,16 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Example:
     # (r'^greenparty/', include('greenparty.foo.urls')),
+    (r'^$',                                                 'greenparty.home.views.redirect'),
     (r'^(?P<language>(en|fr))/$',                           'greenparty.home.views.home'),
     (r'^(?P<language>(en|fr))/calendar/$',                  'greenparty.home.views.calendar'),
     (r'^(?P<language>(en|fr))/donate/$',                    'greenparty.home.views.donate'),
     (r'^(?P<language>(en|fr))/join/$',                      'greenparty.home.views.join'),
 
 
-    (r'^(?P<language>(en|fr))/volunteer/$',                 'greenparty.volunteer.views.volunteer'),
+    (r'^(?P<language>(en|fr))/volunteer/',                  include('greenparty.volunteer.urls')),
+    (r'^(?P<language>(en|fr))/media/',                      include('greenparty.news.urls')),
 
-    (r'^(?P<language>(en|fr))/media/$',                     'greenparty.news.views.events'),
 ##    (r'^(?P<language>(en|fr))/bios/bio=(?P<bio_id>[\d]+)$', 'greenparty.news.views.bios'),
 ##
 ##    (r'^(?P<language>(en|fr))/about/$',                     'greenparty.home.views.about'),

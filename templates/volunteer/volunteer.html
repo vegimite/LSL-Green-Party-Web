@@ -7,7 +7,7 @@
 
 {% block content %}
     <h1>{% trans "Volunteer!" %}</h1>
-    <p>{{ introtext.getText }}</p>
+    <p>{{ introtext.getMainText|safe }}</p>
     <form method="post" action="">
         {{ form }}
         <input type="submit" value="Submit" />

@@ -1,5 +1,5 @@
-from greenparty.volunteer.models import Volunteer, VolunteerBlurb
+from greenparty.volunteer.models import Volunteer, Blurb
 from django.contrib import admin
 
 admin.site.register(Volunteer)
-admin.site.register(VolunteerBlurb)
+admin.site.register(Blurb)
