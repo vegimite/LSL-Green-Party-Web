@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load bbcode %}
 
 {% block title %}{% trans "Media Releases" %}{% endblock %}
 {% block navpage %}media{{ base_url }}{% endblock %}
@@ -8,7 +7,7 @@
 {% block content %}
 
     {% for event in object_list %}
-        {% include "events\event.html" %}
+        {% include "events/event.html" %}
     {% endfor %}
 
 {% endblock %}

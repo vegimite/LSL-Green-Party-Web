@@ -1,4 +1,4 @@
-from greenparty.polls.models import Poll, Choice
+from polls.models import Poll, Choice
 from django.contrib import admin
 
 class ChoiceInline(admin.StackedInline):
@@ -6,7 +6,7 @@ class ChoiceInline(admin.StackedInline):
     extra = 3
 
 class PollAdmin(admin.ModelAdmin):
-    fields = ['pub_date', 'question']
+    fields = ['pub_date', 'question_english', 'question_french', 'draft', 'active']
     inlines = [ChoiceInline]
 
 admin.site.register(Poll, PollAdmin)

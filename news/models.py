@@ -1,7 +1,7 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.utils.html import strip_tags
-from greenparty.home.models import GreenModel
+from home.models import GreenModel
 # Create your models here.
 
 class Event(GreenModel):

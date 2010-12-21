@@ -18,10 +18,24 @@
 
     <h2>{% trans "News" %}</h2>
     </br>
-    {% include "events\event.html" %}
+    {% include "events/event.html" %}
 
 {% endblock %}
 {% block aside %}
     <h2>{{ aside.getTitle }}</h2>
     {{ aside.getMainText|safe }}
+
+    {% if poll %}
+        <h3>{{ poll.getQuestionText }}</h3>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+        <form action="polls/{{ poll.getSlug }}/vote/" method="post">
+            {% csrf_token %}
+            {% for choice in poll.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+                <label for="choice{{ forloop.counter }}">{{ choice.getChoiceText }}</label><br />
+            {% endfor %}
+            <input type="submit" value="Vote" />
+        </form>
+    {% endif %}
 {% endblock %}

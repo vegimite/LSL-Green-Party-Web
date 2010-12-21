@@ -2,8 +2,10 @@
 from django.shortcuts import render_to_response
 from django.utils import translation
 from django.http import HttpResponseRedirect
-from greenparty.home.models import Welcome, Candidate, Aside
-from greenparty.news.models import Event
+from django.core.exceptions import ObjectDoesNotExist
+from home.models import Welcome, Candidate, Aside
+from news.models import Event
+from polls.models import Poll
 
 def redirect(request):
     if request.LANGUAGE_CODE[0:2] == 'fr':
@@ -19,20 +21,29 @@ def home(request, language):
     candidate = Candidate.objects.all()[0]
 
     Aside.lang = language
-    aside = Aside.objects.all()[0]
+    aside = Aside.objects.all()
+    if aside:
+        aside = aside[0]
 
     Event.lang = language
-    event = Event.objects.filter(draft=False).latest('date')
+    try:
+        event = Event.objects.filter(draft=False).latest()
+    except ObjectDoesNotExist:
+        event = None
 
-#    Poll.lang = language
-#    poll = Poll.objects.filter(draft=False).latest('date')
+    Poll.lang = language
+    try:
+        poll = Poll.objects.filter(draft=False).latest()
+    except ObjectDoesNotExist:
+        poll = None
 
     translation.activate(language)
     return render_to_response('home/home.html', ({'language' : language,
                                                   'welcome' : welcome,
                                                   'candidate' : candidate,
                                                   'aside' : aside,
-                                                  'event' : event,}))
+                                                  'event' : event,
+                                                  'poll' : poll,}))
 
 def donate(request, language):
 

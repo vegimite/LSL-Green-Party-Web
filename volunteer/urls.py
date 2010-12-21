@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('greenparty.volunteer.views',
+urlpatterns = patterns('volunteer.views',
 
 	(r'^thanks/$', 'thanks', ),
 	(r'^$', 'volunteer', ),

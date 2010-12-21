@@ -1,16 +1,8 @@
 from django.conf.urls.defaults import *
-from greenparty.news.models import Event
+from news.models import Event
 
 
-
-
-info_dict = {
-	'queryset': Event.objects.filter(draft=False),
-	'date_field': 'date',
-}
-
-
-urlpatterns = patterns('greenparty.news.views',
+urlpatterns = patterns('news.views',
 
 	(r'^(?P<year>\d{4})/(?P<month>[a-z]{3})/(?P<day>\d{1,2})/(?P<slug>[\w-]+)/$', 'event_detail'),
 

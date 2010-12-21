@@ -8,21 +8,16 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Example:
     # (r'^greenparty/', include('greenparty.foo.urls')),
-    (r'^$',                                                 'greenparty.home.views.redirect'),
-    (r'^(?P<language>(en|fr))/$',                           'greenparty.home.views.home'),
-    (r'^(?P<language>(en|fr))/calendar/$',                  'greenparty.home.views.calendar'),
-    (r'^(?P<language>(en|fr))/donate/$',                    'greenparty.home.views.donate'),
-    (r'^(?P<language>(en|fr))/join/$',                      'greenparty.home.views.join'),
+    (r'^$',                                                 'home.views.redirect'),
+    (r'^(?P<language>(en|fr))/$',                           'home.views.home'),
+    (r'^(?P<language>(en|fr))/calendar/$',                  'home.views.calendar'),
+    (r'^(?P<language>(en|fr))/donate/$',                    'home.views.donate'),
+    (r'^(?P<language>(en|fr))/join/$',                      'home.views.join'),
 
 
-    (r'^(?P<language>(en|fr))/volunteer/',                  include('greenparty.volunteer.urls')),
-    (r'^(?P<language>(en|fr))/media/',                      include('greenparty.news.urls')),
-
-##    (r'^(?P<language>(en|fr))/bios/bio=(?P<bio_id>[\d]+)$', 'greenparty.news.views.bios'),
-##
-##    (r'^(?P<language>(en|fr))/about/$',                     'greenparty.home.views.about'),
-##
-##    (r'^(?P<language>(en|fr))/events/$',                    'greenparty.news.views.events'),
+    (r'^(?P<language>(en|fr))/volunteer/',                  include('volunteer.urls')),
+    (r'^(?P<language>(en|fr))/media/',                      include('news.urls')),
+    (r'^(?P<language>(en|fr))/polls/',                      include('polls.urls')),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:

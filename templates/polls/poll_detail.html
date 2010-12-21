@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Media Releases" %}{% endblock %}
+{% block navpage %}polls{{ base_url }}/{% if language = 'fr' %}{{poll.slug_english}}{% else %}{{poll.slug_french}}{% endif %}{% endblock %}
+
+{% block content %}
+    {% with poll.totalVotes as votes %}
+        <h3>{{ poll.getQuestionText }}</h3>
+        <table>
+            <th>{% trans "Selection" %}</th><th></th><th>{% trans "Votes" %}</th>
+            {% for choice in poll.choice_set.all %}
+            <tr>
+                <td>{{ choice.getChoiceText }}</td>
+                <td>
+                    <img src="/site_media/images/pollbar.png" height=14 width="{% widthratio choice.votes votes 400 %}">
+                    {{ choice.percent }} %
+                </td>
+                <td>{{ choice.votes }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endwith %}
+{% endblock %}

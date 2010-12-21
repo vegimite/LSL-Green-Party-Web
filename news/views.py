@@ -2,12 +2,8 @@
 from django.shortcuts import render_to_response
 from django.utils import translation
 from django.views.generic.date_based import archive_index, archive_year, archive_month, archive_day, object_detail
-from greenparty.news.models import  Event
+from news.models import  Event
 
-def setLang(list, language):
-    for l in list:
-        l.lang = language
-    return list
 
 info_dict = {
 	'queryset': Event.objects.filter(draft=False),

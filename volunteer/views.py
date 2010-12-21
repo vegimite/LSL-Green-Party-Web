@@ -2,7 +2,7 @@
 from django.shortcuts import render_to_response
 from django.utils import translation
 from django.http import HttpResponseRedirect
-from greenparty.volunteer.models import Volunteer, Blurb, VolunteerForm
+from volunteer.models import Volunteer, Blurb, VolunteerForm
 
 def volunteer(request, language):
 

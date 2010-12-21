@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-07 13:06-0500\n"
+"POT-Creation-Date: 2010-12-17 13:19-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "LSL Green Party"
 msgstr "Parti Vert LSL"
 
-#: .\templates\base.html.py:50
+#: .\templates\base.html.py:50 .\templates\home\home.html.py:6
 msgid "Home"
 msgstr ""
 
@@ -37,7 +37,8 @@ msgstr "Volontaire"
 msgid "Donate"
 msgstr "Donnez"
 
-#: .\templates\base.html.py:57
+#: .\templates\base.html.py:57 .\templates\home\join.html.py:5
+#: .\templates\home\join.html.py:11
 msgid "Join"
 msgstr ""
 
@@ -45,11 +46,12 @@ msgstr ""
 msgid "News &amp; Events"
 msgstr "Nouvelles &amp; Evénements"
 
-#: .\templates\base.html.py:64
+#: .\templates\base.html.py:64 .\templates\events\event_detail.html.py:5
+#: .\templates\events\event_list.html.py:5
 msgid "Media Releases"
 msgstr ""
 
-#: .\templates\base.html.py:65
+#: .\templates\base.html.py:65 .\templates\home\calendar.html.py:4
 msgid "Calendar"
 msgstr ""
 
@@ -126,12 +128,45 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: .\templates\home\home.html.py:16
+#: .\templates\home\home.html.py:15
 msgid "Our Candidate"
 msgstr ""
 
-#: .\templates\home\home.html.py:22
-msgid "Aside heading"
+#: .\templates\home\home.html.py:19
+msgid "News"
+msgstr ""
+
+#: .\templates\home\join.html.py:12
+msgid ""
+"Green ideas and green policies are taking off in Canada and around the "
+"world, becoming a member now will put you in at the ground-level of smart, "
+"sustainable change."
+msgstr ""
+
+#: .\templates\home\join.html.py:13
+msgid ""
+"To be eligible for a one-year membership in either party, you must make a "
+"minimum contribution of $10. Your gift will help us find talented, "
+"enthusiastic candidates, do research on green policy alternatives and run an "
+"organization that keeps us all in touch and working effectively!"
+msgstr ""
+
+#: .\templates\home\join.html.py:14
+msgid "Join the Green Party of Canada."
+msgstr ""
+
+#: .\templates\home\join.html.py:17
+msgid "Questions?"
+msgstr ""
+
+#: .\templates\volunteer\thanks.html.py:4
+#: .\templates\volunteer\thanks.html.py:9
+msgid "Thank you for volunteering"
+msgstr ""
+
+#: .\templates\volunteer\thanks.html.py:10
+msgid ""
+"Your assistance to the Lac-Saint-Louis Green Party is greatly appreciated."
 msgstr ""
 
 #: .\templates\volunteer\volunteer.html.py:9
